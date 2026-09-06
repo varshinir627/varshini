@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo — a plain list for today</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="board">
+    <header class="board__header">
+      <h1 class="board__title">Todo</h1>
+      <p class="board__date" id="today"></p>
+    </header>
+
+    <form class="add-form" id="add-form">
+      <input
+        type="text"
+        id="task-input"
+        class="add-form__input"
+        placeholder="What needs doing?"
+        autocomplete="off"
+        maxlength="140"
+      />
+      <button type="submit" class="add-form__button">Add</button>
+    </form>
+
+    <div class="filters" id="filters">
+      <button class="filters__btn is-active" data-filter="all">All</button>
+      <button class="filters__btn" data-filter="active">Active</button>
+      <button class="filters__btn" data-filter="done">Done</button>
+    </div>
+
+    <ul class="task-list" id="task-list"></ul>
+
+    <p class="empty-state" id="empty-state">Nothing here yet. Add your first task above.</p>
+
+    <footer class="board__footer">
+      <span id="count-label">0 tasks left</span>
+      <button class="clear-btn" id="clear-done">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
